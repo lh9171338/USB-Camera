@@ -7,7 +7,8 @@
     <arg name="serial_port" default="/dev/ttyVideo0"/>
     <arg name="publish_camera_info" default="true"/>
 
-    <node pkg="usb_camera" type="usb_camera" name="usb_camera" output="screen">
+    ################ start video_capture node ################
+    <node pkg="usb_camera" type="video_capture" name="video_capture" output="screen">
         <param name="save_folder" value="$(arg save_folder)"/>
         <param name="show_flag" value="$(arg show_flag)"/>
         <param name="save_flag" value="$(arg save_flag)"/>

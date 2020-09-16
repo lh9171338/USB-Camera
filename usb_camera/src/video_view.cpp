@@ -47,10 +47,10 @@ void ImageCallback(const ImageConstPtr& msg)
 int main(int argc,char** argv)
 {
     // Initial node
-    ros::init(argc,argv,"image_show");
+    ros::init(argc,argv,"video_view");
     ros::NodeHandle nh;
     ros::NodeHandle nh_priv("~");
-    ROS_INFO("Start showing the image!\n");
+    ROS_INFO("Start the video_view node\n");
 
     // Parameter
     nh_priv.param<string>("save_folder", save_folder, ""); 

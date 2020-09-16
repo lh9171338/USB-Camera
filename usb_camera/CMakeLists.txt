@@ -20,5 +20,7 @@ include_directories(
 )
 
 
-add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} ${catkin_LIBRARIES})
+add_executable(video_capture src/video_capture.cpp)
+add_executable(video_view src/video_view.cpp)
+target_link_libraries(video_capture ${OpenCV_LIBS} ${catkin_LIBRARIES})
+target_link_libraries(video_view ${OpenCV_LIBS} ${catkin_LIBRARIES})

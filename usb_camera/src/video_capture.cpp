@@ -71,10 +71,10 @@ void GetCameraInfo(ros::NodeHandle nh_priv, sensor_msgs::CameraInfo& cam_info)
 int main(int argc, char * argv[])
 {
     // Initial node
-    ros::init(argc, argv, "usb_camera");
+    ros::init(argc, argv, "video_capture");
     ros::NodeHandle nh;
     ros::NodeHandle nh_priv("~");
-    ROS_INFO("Start reading the camera frame!\n");
+    ROS_INFO("Start the video_capture node\n");
 
     // Parameter
     nh_priv.param<string>("save_folder", save_folder, ""); 

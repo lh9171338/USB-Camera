@@ -6,8 +6,8 @@
     <arg name="save_flag" default="false"/>
     <arg name="encoding" default="bgr8"/>
 
-    ################ start image_show node ################
-    <node pkg="image_show" type="image_show" name="image_show" output="screen">
+    ################ start video_view node ################
+    <node pkg="usb_camera" type="video_view" name="video_view" output="screen">
         <param name="save_folder" value="$(arg save_folder)"/>
         <param name="show_flag" value="$(arg show_flag)"/>
         <param name="save_flag" value="$(arg save_flag)"/>
