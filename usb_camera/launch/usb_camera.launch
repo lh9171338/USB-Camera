@@ -1,0 +1,19 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+    <arg name="save_folder" default=""/>
+    <arg name="show_flag" default="false"/>
+    <arg name="save_flag" default="false"/>
+    <arg name="serial_port" default="/dev/ttyVideo0"/>
+    <arg name="publish_camera_info" default="true"/>
+
+    <node pkg="usb_camera" type="usb_camera" name="usb_camera" output="screen">
+        <param name="save_folder" value="$(arg save_folder)"/>
+        <param name="show_flag" value="$(arg show_flag)"/>
+        <param name="save_flag" value="$(arg save_flag)"/>
+        <param name="serial_port" value="$(arg serial_port)"/>
+        <param name="publish_camera_info" value="$(arg publish_camera_info)"/>
+        <rosparam file="$(find usb_camera)/params/mono.yaml" command="load" />
+    </node>
+
+</launch>

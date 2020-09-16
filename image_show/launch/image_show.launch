@@ -1,0 +1,17 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+    <arg name="save_folder" default=""/>
+    <arg name="show_flag" default="true"/>
+    <arg name="save_flag" default="false"/>
+    <arg name="encoding" default="bgr8"/>
+
+    ################ start image_show node ################
+    <node pkg="image_show" type="image_show" name="image_show" output="screen">
+        <param name="save_folder" value="$(arg save_folder)"/>
+        <param name="show_flag" value="$(arg show_flag)"/>
+        <param name="save_flag" value="$(arg save_flag)"/>
+        <param name="encoding" value="$(arg encoding)"/>
+    </node>
+
+</launch>
