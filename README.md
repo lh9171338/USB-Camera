@@ -65,5 +65,5 @@ roslaunch usb_camera video_view.launch
 ```
 
 # 3. Node Graph  
-![image](https://github.com/lh9171338/Camera/blob/master/rosgraph.png)
+![image](https://github.com/lh9171338/USB-Camera/blob/master/usb_camera/rosgraph.png)
 
