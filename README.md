@@ -27,7 +27,7 @@ camera_info([sensor_msgs/CameraInfo](http://docs.ros.org/api/sensor_msgs/html/ms
 ~save_flag(bool; defalut: false)  
 >>Whether to save video frames. When save_flag is set to true, the video frames will be saved to the folder appointed by save_folder.
 
-~serial_port(string; default: "dev/ttyVideo0")  
+~serial_port(string; default: "/dev/ttyVideo0")  
 >>The serial port of the USB camera.
 
 ~publish_camera_info(bool; default: true)  
