@@ -1,13 +1,13 @@
 <!-- -*- mode: XML -*- -->
 <launch>
 
-    <arg name="save_folder" default=""/>
-    <arg name="show_flag" default="true"/>
+    <arg name="save_folder" default="$(find usb_camera)/temp"/>
+    <arg name="show_flag" default="false"/>
     <arg name="save_flag" default="false"/>
     <arg name="encoding" default="bgr8"/>
 
     ################ start video_view node ################
-    <node pkg="usb_camera" type="video_view" name="video_view" output="screen">
+    <node pkg="usb_camera" type="video_view.py" name="video_view" output="screen">
         <param name="save_folder" value="$(arg save_folder)"/>
         <param name="show_flag" value="$(arg show_flag)"/>
         <param name="save_flag" value="$(arg save_flag)"/>
